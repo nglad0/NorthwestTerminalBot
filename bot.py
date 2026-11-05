@@ -23,6 +23,7 @@ class NWTRosterBot(commands.Bot):
     async def setup_hook(self):
         await self.load_extension("commands.assignbus")
         await self.load_extension("commands.revokebus")
+        await self.load_extension("commands.setstatus")
         
         synced = await self.tree.sync()
         print(f"Synced {len(synced)} slash command(s).")
